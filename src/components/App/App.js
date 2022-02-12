@@ -6,7 +6,11 @@ import InputForm from '../InputForm';
 import Footer from '../Footer';
 
 const App = () => {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')));
+  const [todos, setTodos] = useState(
+    localStorage.getItem('todos')
+      ? JSON.parse(localStorage.getItem('todos'))
+      : []
+  );
   const [filter, setFilter] = useState('all');
 
   useEffect(() => {
