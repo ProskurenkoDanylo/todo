@@ -7,7 +7,9 @@ const InputForm = ({ onAddTodoItem }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    onAddTodoItem(value);
+    if (value) {
+      onAddTodoItem(value);
+    }
     setValue('');
   };
 

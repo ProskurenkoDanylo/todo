@@ -24,7 +24,9 @@ const TodoListItem = ({
 
   const editingFormSubmit = (e) => {
     e.preventDefault();
-    onEditTodo(id, editing.value);
+    if (editing.value) {
+      onEditTodo(id, editing.value);
+    }
     setEditing(null);
   };
 
