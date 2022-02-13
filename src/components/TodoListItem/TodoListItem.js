@@ -26,6 +26,8 @@ const TodoListItem = ({
     e.preventDefault();
     if (editing.value) {
       onEditTodo(id, editing.value);
+    } else {
+      onDelete(id);
     }
     setEditing(null);
   };

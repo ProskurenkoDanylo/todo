@@ -9,6 +9,8 @@ const InputForm = ({ onAddTodoItem }) => {
     e.preventDefault();
     if (value) {
       onAddTodoItem(value);
+    } else {
+      e.target[0].blur();
     }
     setValue('');
   };
